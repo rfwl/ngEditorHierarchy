@@ -1,0 +1,72 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="Code">Code:</label>
+<input type="text" class="form-control" formControlName="Code" id="Code" name="Code" >
+</div>
+
+<div class="form-group">
+<label for="Name">Name:</label>
+<input type="text" class="form-control" formControlName="Name" id="Name" name="Name" >
+</div>
+
+
+<div class="form-group">
+  <label for="Description">Description:</label>
+  <textarea class="form-control" formControlName="Description" id="Description" name="Description"></textarea>
+</div>
+
+<div class="form-group">
+<label for="Status">Status:</label>
+<select class="form-control" formControlName="Status" id="Status" name="Status" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'projectProgressStatusNames')">{{nm}}</option>
+</select>
+</div>
+
+
+<div class="form-group">
+  <label for="Comment">Comment:</label>
+  <textarea class="form-control" formControlName="Comment" id="Comment" name="Comment"></textarea>
+</div>
+
+<div class="form-group">
+<label for="Updated">Updated:</label>
+<input type="date" class="form-control" formControlName="Updated" id="Updated" name="Updated" >
+</div>
+
+
+<div class="form-group">
+  <label for="Task">Task:</label>
+  <open-field-editor-form-control class='form-control' formControlName="Task" id="Task" name="Task"
+    [params]='build_paramsShowingEditorGrid("Task")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+<div class="form-group">
+  <label for="Issue">Issue:</label>
+  <open-field-editor-form-control class='form-control' formControlName="Issue" id="Issue" name="Issue"
+    [params]='build_paramsShowingEditorGrid("Issue")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

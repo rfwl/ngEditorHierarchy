@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolTeacherModule } from './GeneratedCodeFilesContainer/school-teacher/school-teacher.module'
+  import { SchoolTeacherEffects } from './GeneratedCodeFilesContainer/school-teacher/school-teacher.store'
+
+  imports: [
+    ......
+    SchoolTeacherModule,
+    EffectsModule.forRoot([... SchoolTeacherEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolTeacherEditorAgGridComponent } from './GeneratedCodeFilesContainer/school-teacher/editor-aggrid/school-teacher-editor-aggrid.component'
+
+  import { SchoolTeacherEditorPTableComponent } from './GeneratedCodeFilesContainer/school-teacher/editor-ptable/school-teacher-editor-ptable.component'
+
+  import { SchoolTeacherEditorFormComponent } from './GeneratedCodeFilesContainer/school-teacher/editor-form/school-teacher-editor-form.component'
+
+  <school-teacher-editor-aggrid #schoolTeacherEditorAgGridPage ></school-teacher-editor-aggrid>
+
+  <school-teacher-editor-ptable #schoolTeacherEditorPTablePage ></school-teacher-editor-ptable>
+
+  @ViewChild('schoolTeacherEditorAgGridPage', { static: false }) schoolTeacherEditorAgGrid?: SchoolTeacherEditorAgGridComponent
+
+  @ViewChild('schoolTeacherEditorPTablePage', { static: false }) schoolTeacherEditorPTable?: SchoolTeacherEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolTeacherState, schoolTeacherReducer } from "./GeneratedCodeFilesContainer/school-teacher/school-teacher.store"
+
+  export interface AppState {
+    ......
+    schoolTeacher: SchoolTeacherState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    schoolTeacher: schoolTeacherReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

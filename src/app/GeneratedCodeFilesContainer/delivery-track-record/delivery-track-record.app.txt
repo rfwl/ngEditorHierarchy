@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryTrackRecordModule } from './GeneratedCodeFilesContainer/delivery-track-record/delivery-track-record.module'
+  import { DeliveryTrackRecordEffects } from './GeneratedCodeFilesContainer/delivery-track-record/delivery-track-record.store'
+
+  imports: [
+    ......
+    DeliveryTrackRecordModule,
+    EffectsModule.forRoot([... DeliveryTrackRecordEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryTrackRecordEditorAgGridComponent } from './GeneratedCodeFilesContainer/delivery-track-record/editor-aggrid/delivery-track-record-editor-aggrid.component'
+
+  import { DeliveryTrackRecordEditorPTableComponent } from './GeneratedCodeFilesContainer/delivery-track-record/editor-ptable/delivery-track-record-editor-ptable.component'
+
+  import { DeliveryTrackRecordEditorFormComponent } from './GeneratedCodeFilesContainer/delivery-track-record/editor-form/delivery-track-record-editor-form.component'
+
+  <delivery-track-record-editor-aggrid #deliveryTrackRecordEditorAgGridPage ></delivery-track-record-editor-aggrid>
+
+  <delivery-track-record-editor-ptable #deliveryTrackRecordEditorPTablePage ></delivery-track-record-editor-ptable>
+
+  @ViewChild('deliveryTrackRecordEditorAgGridPage', { static: false }) deliveryTrackRecordEditorAgGrid?: DeliveryTrackRecordEditorAgGridComponent
+
+  @ViewChild('deliveryTrackRecordEditorPTablePage', { static: false }) deliveryTrackRecordEditorPTable?: DeliveryTrackRecordEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryTrackRecordState, deliveryTrackRecordReducer } from "./GeneratedCodeFilesContainer/delivery-track-record/delivery-track-record.store"
+
+  export interface AppState {
+    ......
+    deliveryTrackRecord: DeliveryTrackRecordState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    deliveryTrackRecord: deliveryTrackRecordReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

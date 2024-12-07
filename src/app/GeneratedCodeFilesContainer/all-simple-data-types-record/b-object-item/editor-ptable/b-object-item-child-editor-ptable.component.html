@@ -1,0 +1,69 @@
+
+
+    <form [class]="agGridThemeName">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >BObjectItems:</h4>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create BObjectItem</button>
+        <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+      </div>
+      <div class="modal-body ag-root-wrapper" style="height: 40em;" >
+        <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+          <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+        </div>
+    <p-table
+      #templatePTable
+      [value]="editedObjects"
+      [resizableColumns]="true"
+      columnResizeMode="expand"
+      styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+      [paginator]="false"
+      [tableStyle]="{'min-width': '50rem',  'min-height': '3em', 'font-size': '12px' }"
+      [rowHover]="true"
+      dataKey="id"
+    >
+
+      <ng-template pTemplate="header">
+          <tr>
+            <th></th>
+            <th></th>
+
+<th pReorderableColumn pResizableColumn pSortableColumn="DString" style="min-width:5rem">DString<p-sortIcon field="DString" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DNumber" style="min-width:5rem">DNumber<p-sortIcon field="DNumber" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DBoolean" style="min-width:5rem">DBoolean<p-sortIcon field="DBoolean" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DEmail" style="min-width:5rem">DEmail<p-sortIcon field="DEmail" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DUrl" style="min-width:5rem">DUrl<p-sortIcon field="DUrl" /></th>
+<th pReorderableColumn pResizableColumn >DColor</th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DDate" style="min-width:5rem">DDate<p-sortIcon field="DDate" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DTime" style="min-width:5rem">DTime<p-sortIcon field="DTime" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="DDatetime" style="min-width:5rem">DDatetime<p-sortIcon field="DDatetime" /></th>
+
+
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+          <tr>
+            <td>
+              <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+            </td>
+            <td>
+              <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+            </td>
+
+<td>{{  rowData?.DString }}</td>
+<td>{{  rowData?.DNumber }}</td>
+<input type="checkbox" [checked]="rowData?.DBoolean" disabled />
+<td>{{  rowData?.DEmail }}</td>
+<td>{{  rowData?.DUrl }}</td>
+<td [ngStyle]="{'background-color': rowData?.DColor}"></td> 
+<td>{{  rowData?.DDate }}</td>
+<td>{{  rowData?.DTime }}</td>
+<td>{{  rowData?.DDatetime }}</td>
+
+
+        </tr>
+      </ng-template>
+
+      </p-table>
+    </div>
+    </form>

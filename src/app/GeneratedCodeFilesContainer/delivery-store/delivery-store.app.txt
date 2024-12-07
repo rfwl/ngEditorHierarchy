@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryStoreModule } from './GeneratedCodeFilesContainer/delivery-store/delivery-store.module'
+  import { DeliveryStoreEffects } from './GeneratedCodeFilesContainer/delivery-store/delivery-store.store'
+
+  imports: [
+    ......
+    DeliveryStoreModule,
+    EffectsModule.forRoot([... DeliveryStoreEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryStoreEditorAgGridComponent } from './GeneratedCodeFilesContainer/delivery-store/editor-aggrid/delivery-store-editor-aggrid.component'
+
+  import { DeliveryStoreEditorPTableComponent } from './GeneratedCodeFilesContainer/delivery-store/editor-ptable/delivery-store-editor-ptable.component'
+
+  import { DeliveryStoreEditorFormComponent } from './GeneratedCodeFilesContainer/delivery-store/editor-form/delivery-store-editor-form.component'
+
+  <delivery-store-editor-aggrid #deliveryStoreEditorAgGridPage ></delivery-store-editor-aggrid>
+
+  <delivery-store-editor-ptable #deliveryStoreEditorPTablePage ></delivery-store-editor-ptable>
+
+  @ViewChild('deliveryStoreEditorAgGridPage', { static: false }) deliveryStoreEditorAgGrid?: DeliveryStoreEditorAgGridComponent
+
+  @ViewChild('deliveryStoreEditorPTablePage', { static: false }) deliveryStoreEditorPTable?: DeliveryStoreEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryStoreState, deliveryStoreReducer } from "./GeneratedCodeFilesContainer/delivery-store/delivery-store.store"
+
+  export interface AppState {
+    ......
+    deliveryStore: DeliveryStoreState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    deliveryStore: deliveryStoreReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

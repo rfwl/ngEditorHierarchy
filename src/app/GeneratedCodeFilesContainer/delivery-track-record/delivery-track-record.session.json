@@ -1,0 +1,404 @@
+{
+  "parsedRawJsonObject": {
+    "Product": "VB2003",
+    "Store": "Canberra",
+    "Contractor": "1001",
+    "Customer": {
+      "Name": "Mary",
+      "Phone": "(02) 6224 9500",
+      "Comment": "ABC"
+    },
+    "Address": {
+      "Address1": "Flat 5",
+      "Address2": "148 Bunda Street",
+      "Suburb": "Canbe"
+    },
+    "StartDateTime": "2024-10-09T15:30",
+    "Status": "In Progress",
+    "Comment": "ABC"
+  },
+  "rootJDF": {
+    "field": "rootLevelObject",
+    "children": [
+      {
+        "field": "Product",
+        "children": [],
+        "index": 2,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Product",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null,
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "RecordListFromNGRXStore",
+          "optionValueArrayName": "",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "delivery,product",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "Code",
+          "recordListValueField": "Code"
+        }
+      },
+      {
+        "field": "Store",
+        "children": [],
+        "index": 3,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Store",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null,
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "RecordListFromNGRXStore",
+          "optionValueArrayName": "",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "delivery,store",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "Name",
+          "recordListValueField": "Name"
+        }
+      },
+      {
+        "field": "Contractor",
+        "children": [],
+        "index": 4,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Contractor",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null,
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "RecordListFromNGRXStore",
+          "optionValueArrayName": "",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "delivery,contractor",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "Name",
+          "recordListValueField": "Name"
+        }
+      },
+      {
+        "field": "Customer",
+        "children": [
+          {
+            "field": "Name",
+            "children": [],
+            "index": 6,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Name",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Phone",
+            "children": [],
+            "index": 7,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Phone",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Comment",
+            "children": [],
+            "index": 8,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "LongString",
+            "arrayMemberType": null,
+            "multipleWordsName": "Comment",
+            "dataTypeCode": "LongString",
+            "dataType": {
+              "code": "LongString",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": false
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          }
+        ],
+        "index": 5,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Object",
+        "arrayMemberType": null,
+        "multipleWordsName": "Customer",
+        "dataTypeCode": "Object",
+        "dataType": {
+          "code": "Object",
+          "tsDataType": "any",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Address",
+        "children": [
+          {
+            "field": "Address1",
+            "children": [],
+            "index": 10,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Address1",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Address2",
+            "children": [],
+            "index": 11,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Address2",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Suburb",
+            "children": [],
+            "index": 12,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Suburb",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          }
+        ],
+        "index": 9,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Object",
+        "arrayMemberType": null,
+        "multipleWordsName": "Address",
+        "dataTypeCode": "Object",
+        "dataType": {
+          "code": "Object",
+          "tsDataType": "any",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "StartDateTime",
+        "children": [],
+        "index": 13,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Datetime",
+        "arrayMemberType": null,
+        "multipleWordsName": "StartDateTime",
+        "dataTypeCode": "Datetime",
+        "dataType": {
+          "code": "Datetime",
+          "tsDataType": "string",
+          "htmlInputType": "datetime-local",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Status",
+        "children": [],
+        "index": 14,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Status",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null,
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "ValueArray",
+          "optionValueArrayName": "deliveryStatusNames",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "",
+          "recordListValueField": ""
+        }
+      },
+      {
+        "field": "Comment",
+        "children": [],
+        "index": 15,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "LongString",
+        "arrayMemberType": null,
+        "multipleWordsName": "Comment",
+        "dataTypeCode": "LongString",
+        "dataType": {
+          "code": "LongString",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      }
+    ],
+    "index": 0,
+    "parent": null,
+    "level": 0,
+    "_fieldObjectPath": null,
+    "_fieldNamePath": null,
+    "fieldType": "Object",
+    "dataTypeCode": "Object",
+    "dataType": {
+      "code": "Object",
+      "tsDataType": "any",
+      "htmlInputType": "text",
+      "defaultValue": "null",
+      "sortable": false
+    },
+    "multipleWordsName": "delivery, track, record",
+    "subEntityList": null,
+    "childEntityList": null
+  }
+}

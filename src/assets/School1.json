@@ -1,0 +1,182 @@
+ {
+		"Category": "Private",
+		"Code": "NSC20",
+        "Name": "Northshore Coaching",
+        "Description": "Northshore Coaching is set up in 2012.",
+        "Capacity": 200,
+
+        "Contact": {
+          "Phone": "0299886677",
+          "Mobile": "0483387983",
+          "Email": "nsc@northshorecoaching.org"
+        },
+		
+		"Address": {
+			"Unit": "23A", 
+			"Number": 356,
+			"Street": "Fastel Ave.",
+			"Suburb": "South Point", 
+			"City": "Lambourgh",
+			"State": "Bellevue",
+			"Postcode": 34908,
+			"Country": "New Liverpool"          
+        },
+        
+		"Students": [
+			{
+				"Code": 10209,
+				"Title": "Mr",
+				"FirstName": "Connor",
+				"MiddleName": "",
+				"LastName": "Hughes",        
+				"Gender": "M",
+				"DOB": "2011-11-25",        
+				"Active": true,
+				
+				"Contact": {
+				  "Email": "abcdef@abcdef.com",
+				  "Phone": "12345678",
+				  "Web": "abcdef.com",
+				  "Mobile": "012345678"
+				},
+
+				"Address": {
+					"Unit": "23A", 
+					"Number": 356,
+					"Street": "Fastel Ave.",
+					"Suburb": "South Point", 
+					"City": "Lambourgh",
+					"State": "Bellevue",
+					"Postcode": 34908,
+					"Country": "New Liverpool"          
+				}				
+				
+			}     
+          
+        ],
+
+        "Teachers": [
+		
+			{
+				"Title": "Mr",
+				"FirstName": "Jessie",
+				"MiddleName": "",
+				"LastName": "Gao",
+				"Gender": "M",
+				"DOB": "1980-05-14",
+				
+				"Code": "20012",
+				"Specialty": "Math",
+				"Level": "Advanced",
+				"Active": true,
+				
+				"Contact": {
+					"Mobile": "012345678",
+					"Phone": "12345678",
+					"Email": "abcdef@abcdef.com",
+					"Web": "abcdef.com"
+				},
+
+				"Address": {
+					"Unit": "23A", 
+					"Number": 356,
+					"Street": "Fastel Ave.",
+					"Suburb": "South Point", 
+					"City": "Lambourgh",
+					"State": "Bellevue",
+					"Postcode": 34908,
+					"Country": "New Liverpool"  
+				},
+				
+				"RegisteredCourses": [
+					{
+						"CourseName": "Histroy Intermediate-Room3005",
+						"CourseCode": "C10002",
+						"Score": 80,
+						"Attendance": 24,
+						"Comment": "Perform well",  
+						"Registered": "2024-08-30 16:30",
+						"AcceptedBy": "20225"	
+						
+					}
+				]     
+			}
+			
+        ],
+		
+		"Courses": [
+		
+			{
+				"Level": "Primary",
+				"Name": "History Primary",
+				"Code": "History1",
+				"Size": "Extra Large",
+				"Description": "Primary History",
+				"Specialty": "History",
+				"StartDate": "2016-08-01",
+				"EndDate": "2016-12-10",
+				"BeginTime": "08:30",
+				"EndTime": "14:30",				
+				"Classes": [
+					{
+						"Name": "Histroy Intermediate-Room3005",
+						"Code": "C10002",
+						"RoomCode": "3005",
+						"Teacher": "20022",     
+						"StudentCodes": [
+						  10255,
+						  10278,
+						  10123,
+						  10297,
+						  10082,
+						  10044,
+						  10176,
+						  10126,
+						  10073,
+						  10020
+						]
+					}
+				]     
+			}
+			
+        ],
+		
+        "Rooms": [        
+			{
+				"Capacity": 25,
+				"Code": "3004",
+				"Name": "Room3004",
+				"Description": "Room3004",
+				"Address": {
+					"Unit": "23A", 
+					"Number": 356,
+					"Street": "Fastel Road",
+					"Suburb": "South Point", 
+					"City": "Lambourgh",
+					"State": "Bellevue",
+					"Postcode": 34908,
+					"Country": "New Liverpool"  
+				} 
+			}
+        ]
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

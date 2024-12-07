@@ -1,0 +1,37 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="Address1">Address1:</label>
+<input type="text" class="form-control" formControlName="Address1" id="Address1" name="Address1" >
+</div>
+
+<div class="form-group">
+<label for="Address2">Address2:</label>
+<input type="text" class="form-control" formControlName="Address2" id="Address2" name="Address2" >
+</div>
+
+<div class="form-group">
+<label for="Suburb">Suburb:</label>
+<input type="text" class="form-control" formControlName="Suburb" id="Suburb" name="Suburb" >
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

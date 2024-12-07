@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ContactPersonListModule } from './GeneratedCodeFilesContainer/contact-person-list/contact-person-list.module'
+  import { ContactPersonListEffects } from './GeneratedCodeFilesContainer/contact-person-list/contact-person-list.store'
+
+  imports: [
+    ......
+    ContactPersonListModule,
+    EffectsModule.forRoot([... ContactPersonListEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ContactPersonListEditorAgGridComponent } from './GeneratedCodeFilesContainer/contact-person-list/editor-aggrid/contact-person-list-editor-aggrid.component'
+
+  import { ContactPersonListEditorPTableComponent } from './GeneratedCodeFilesContainer/contact-person-list/editor-ptable/contact-person-list-editor-ptable.component'
+
+  import { ContactPersonListEditorFormComponent } from './GeneratedCodeFilesContainer/contact-person-list/editor-form/contact-person-list-editor-form.component'
+
+  <contact-person-list-editor-aggrid #contactPersonListEditorAgGridPage ></contact-person-list-editor-aggrid>
+
+  <contact-person-list-editor-ptable #contactPersonListEditorPTablePage ></contact-person-list-editor-ptable>
+
+  @ViewChild('contactPersonListEditorAgGridPage', { static: false }) contactPersonListEditorAgGrid?: ContactPersonListEditorAgGridComponent
+
+  @ViewChild('contactPersonListEditorPTablePage', { static: false }) contactPersonListEditorPTable?: ContactPersonListEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ContactPersonListState, contactPersonListReducer } from "./GeneratedCodeFilesContainer/contact-person-list/contact-person-list.store"
+
+  export interface AppState {
+    ......
+    contactPersonList: ContactPersonListState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    contactPersonList: contactPersonListReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

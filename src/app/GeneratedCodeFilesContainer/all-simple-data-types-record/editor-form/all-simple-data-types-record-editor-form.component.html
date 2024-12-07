@@ -1,0 +1,82 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="AString">AString:</label>
+<input type="text" class="form-control" formControlName="AString" id="AString" name="AString" >
+</div>
+
+<div class="form-group">
+<label for="ANumber">ANumber:</label>
+<input type="number" class="form-control" formControlName="ANumber" id="ANumber" name="ANumber" >
+</div>
+
+<div class="form-group">
+<label for="ABoolean">ABoolean:</label>
+<input type="checkbox" class="form-check-input ms-2 me-4" formControlName="ABoolean" id="ABoolean" name="ABoolean" >
+</div>
+
+<div class="form-group">
+<label for="AEmail">AEmail:</label>
+<input type="email" class="form-control" formControlName="AEmail" id="AEmail" name="AEmail" >
+</div>
+
+<div class="form-group">
+<label for="AUrl">AUrl:</label>
+<input type="url" class="form-control" formControlName="AUrl" id="AUrl" name="AUrl" >
+</div>
+
+<div class="form-group">
+<label for="AColor">AColor:</label>
+<input type="color" class="form-control" formControlName="AColor" id="AColor" name="AColor" >
+</div>
+
+<div class="form-group">
+<label for="ADate">ADate:</label>
+<input type="date" class="form-control" formControlName="ADate" id="ADate" name="ADate" >
+</div>
+
+<div class="form-group">
+<label for="ATime">ATime:</label>
+<input type="time" class="form-control" formControlName="ATime" id="ATime" name="ATime" >
+</div>
+
+<div class="form-group">
+<label for="ADatetime">ADatetime:</label>
+<input type="datetime-local" class="form-control" formControlName="ADatetime" id="ADatetime" name="ADatetime" >
+</div>
+
+
+<div class="form-group">
+  <label for="AObject">AObject:</label>
+  <open-field-editor-form-control class='form-control' formControlName="AObject" id="AObject" name="AObject"
+    [params]='build_paramsShowingEditorForm("AObject")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+<div class="form-group">
+  <label for="AObjects">AObjects:</label>
+  <open-field-editor-form-control class='form-control' formControlName="AObjects" id="AObjects" name="AObjects"
+    [params]='build_paramsShowingEditorGrid("AObjects")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+  

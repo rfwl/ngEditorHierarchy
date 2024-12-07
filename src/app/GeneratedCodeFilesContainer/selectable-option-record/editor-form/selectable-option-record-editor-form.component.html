@@ -1,0 +1,52 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="value">Value:</label>
+<input type="number" class="form-control" formControlName="value" id="value" name="value" >
+</div>
+
+<div class="form-group">
+<label for="code">Code:</label>
+<input type="text" class="form-control" formControlName="code" id="code" name="code" >
+</div>
+
+<div class="form-group">
+<label for="name">Name:</label>
+<input type="text" class="form-control" formControlName="name" id="name" name="name" >
+</div>
+
+
+<div class="form-group">
+  <label for="description">Description:</label>
+  <textarea class="form-control" formControlName="description" id="description" name="description"></textarea>
+</div>
+
+<div class="form-group">
+<label for="firstName">FirstName:</label>
+<input type="text" class="form-control" formControlName="firstName" id="firstName" name="firstName" >
+</div>
+
+<div class="form-group">
+<label for="lastName">LastName:</label>
+<input type="text" class="form-control" formControlName="lastName" id="lastName" name="lastName" >
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+  

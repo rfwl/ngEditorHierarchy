@@ -1,0 +1,67 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+  <label for="BStrings">BStrings:</label>
+  <bep-input-group [inputType]="'text'" class="form-control" formControlName="BStrings" id="BStrings" name="BStrings" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BNumbers">BNumbers:</label>
+  <bep-input-group [inputType]="'number'" class="form-control" formControlName="BNumbers" id="BNumbers" name="BNumbers" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BBooleans">BBooleans:</label>
+  <bep-input-boolean-group class="form-control" formControlName="BBooleans" id="BBooleans" name="BBooleans" ></bep-input-boolean-group>
+</div>
+
+<div class="form-group">
+  <label for="BEmails">BEmails:</label>
+  <bep-input-group [inputType]="'email'" class="form-control" formControlName="BEmails" id="BEmails" name="BEmails" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BUrls">BUrls:</label>
+  <bep-input-group [inputType]="'url'" class="form-control" formControlName="BUrls" id="BUrls" name="BUrls" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BColors">BColors:</label>
+  <bep-input-group [inputType]="'color'" class="form-control" formControlName="BColors" id="BColors" name="BColors" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BDates">BDates:</label>
+  <bep-input-group [inputType]="'date'" class="form-control" formControlName="BDates" id="BDates" name="BDates" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BTimes">BTimes:</label>
+  <bep-input-group [inputType]="'time'" class="form-control" formControlName="BTimes" id="BTimes" name="BTimes" ></bep-input-group>
+</div>
+
+<div class="form-group">
+  <label for="BDatetimes">BDatetimes:</label>
+  <bep-input-group [inputType]="'datetime-local'" class="form-control" formControlName="BDatetimes" id="BDatetimes" name="BDatetimes" ></bep-input-group>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

@@ -1,0 +1,83 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="EString">EString:</label>
+<input type="text" class="form-control" formControlName="EString" id="EString" name="EString" >
+</div>
+
+<div class="form-group">
+<label for="ENumber">ENumber:</label>
+<input type="number" class="form-control" formControlName="ENumber" id="ENumber" name="ENumber" >
+</div>
+
+<div class="form-group">
+<label for="EBoolean">EBoolean:</label>
+<input type="checkbox" class="form-check-input ms-2 me-4" formControlName="EBoolean" id="EBoolean" name="EBoolean" >
+</div>
+
+<div class="form-group">
+<label for="EEmail">EEmail:</label>
+<input type="email" class="form-control" formControlName="EEmail" id="EEmail" name="EEmail" >
+</div>
+
+<div class="form-group">
+<label for="EUrl">EUrl:</label>
+<input type="url" class="form-control" formControlName="EUrl" id="EUrl" name="EUrl" >
+</div>
+
+<div class="form-group">
+<label for="EColor">EColor:</label>
+<input type="color" class="form-control" formControlName="EColor" id="EColor" name="EColor" >
+</div>
+
+<div class="form-group">
+<label for="EDate">EDate:</label>
+<input type="date" class="form-control" formControlName="EDate" id="EDate" name="EDate" >
+</div>
+
+<div class="form-group">
+<label for="ETime">ETime:</label>
+<input type="time" class="form-control" formControlName="ETime" id="ETime" name="ETime" >
+</div>
+
+<div class="form-group">
+<label for="EDatetime">EDatetime:</label>
+<input type="datetime-local" class="form-control" formControlName="EDatetime" id="EDatetime" name="EDatetime" >
+</div>
+
+
+<div class="form-group">
+  <label for="EObject">EObject:</label>
+  <open-field-editor-form-control class='form-control' formControlName="EObject" id="EObject" name="EObject"
+    [params]='build_paramsShowingEditorForm("EObject")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+<div class="form-group">
+  <label for="EObjects">EObjects:</label>
+  <open-field-editor-form-control class='form-control' formControlName="EObjects" id="EObjects" name="EObjects"
+    [params]='build_paramsShowingEditorGrid("EObjects")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

@@ -1,0 +1,32 @@
+
+
+    <form [class]="agGridThemeName">
+      <div class="modal-header ag-root-wrapper d-flex flex-row">
+        <h4 class="modal-title flex-fill" >DeliveryStore List:</h4>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create DeliveryStore</button>
+        <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorAgGrid($event)" ></i>
+      </div>
+      <div class="modal-body ag-root-wrapper" >
+        <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+          <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+        </div>
+
+        <ag-grid-angular
+          #editor_agGrid
+          style="width:100%; height: 80vh;"
+          id="editor_agGrid"
+          [class]="agGridThemeName"
+          [rowData]="editor_agGrid_rowData"
+          [columnDefs]="editor_agGrid_columnDefs"
+          [defaultColDef]="editor_agGrid_defaultColDef"
+          (gridReady)="editor_agGrid_onGridReady($event)"
+          (rowDataChanged)="editor_agGrid_onRowDataChanged($event)"
+          [suppressColumnVirtualisation]="true"
+          [components]="editor_agGrid_frameworkComponents"
+          [getRowId]="editor_agGrid_getRowNodeId"
+        >
+        </ag-grid-angular>
+      </div>
+    </form>
+    

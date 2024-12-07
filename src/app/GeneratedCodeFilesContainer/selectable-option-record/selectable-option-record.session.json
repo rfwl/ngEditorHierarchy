@@ -1,0 +1,164 @@
+{
+  "parsedRawJsonObject": {
+    "value": 1,
+    "code": "Jan",
+    "name": "January",
+    "description": "The first month of a year",
+    "firstName": "Jeremi",
+    "lastName": "Harris"
+  },
+  "rootJDF": {
+    "field": "rootLevelObject",
+    "children": [
+      {
+        "field": "value",
+        "children": [],
+        "index": 2,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Number",
+        "arrayMemberType": null,
+        "multipleWordsName": "value",
+        "dataTypeCode": "Number",
+        "dataType": {
+          "code": "Number",
+          "tsDataType": "number",
+          "htmlInputType": "number",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "code",
+        "children": [],
+        "index": 3,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "code",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "name",
+        "children": [],
+        "index": 4,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "name",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "description",
+        "children": [],
+        "index": 5,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "LongString",
+        "arrayMemberType": null,
+        "multipleWordsName": "description",
+        "dataTypeCode": "LongString",
+        "dataType": {
+          "code": "LongString",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "firstName",
+        "children": [],
+        "index": 6,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "firstName",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "lastName",
+        "children": [],
+        "index": 7,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "lastName",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      }
+    ],
+    "index": 0,
+    "parent": null,
+    "level": 0,
+    "_fieldObjectPath": null,
+    "_fieldNamePath": null,
+    "fieldType": "Object",
+    "dataTypeCode": "Object",
+    "dataType": {
+      "code": "Object",
+      "tsDataType": "any",
+      "htmlInputType": "text",
+      "defaultValue": "null",
+      "sortable": false
+    },
+    "multipleWordsName": "selectable,option,record",
+    "subEntityList": null,
+    "childEntityList": null
+  }
+}

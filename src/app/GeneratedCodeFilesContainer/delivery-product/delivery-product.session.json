@@ -1,0 +1,271 @@
+{
+  "parsedRawJsonObject": {
+    "Category": "Electronics",
+    "Code": "VB2003",
+    "Model": "TV12",
+    "Make": "Toshiba",
+    "Price": 3050,
+    "Specifications": {
+      "Width": 56,
+      "Height": 21,
+      "Depth": 21,
+      "Weight": 22
+    }
+  },
+  "rootJDF": {
+    "field": "rootLevelObject",
+    "children": [
+      {
+        "field": "Category",
+        "children": [],
+        "index": 2,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Category",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "ValueArray",
+          "optionValueArrayName": "deliveryProductCategoryNames",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "",
+          "recordListValueField": ""
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Code",
+        "children": [],
+        "index": 3,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Code",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Model",
+        "children": [],
+        "index": 4,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Model",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Make",
+        "children": [],
+        "index": 5,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Make",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Price",
+        "children": [],
+        "index": 6,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Number",
+        "arrayMemberType": null,
+        "multipleWordsName": "Price",
+        "dataTypeCode": "Number",
+        "dataType": {
+          "code": "Number",
+          "tsDataType": "number",
+          "htmlInputType": "number",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Specifications",
+        "children": [
+          {
+            "field": "Width",
+            "children": [],
+            "index": 8,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "Number",
+            "arrayMemberType": null,
+            "multipleWordsName": "Width",
+            "dataTypeCode": "Number",
+            "dataType": {
+              "code": "Number",
+              "tsDataType": "number",
+              "htmlInputType": "number",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Height",
+            "children": [],
+            "index": 9,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "Number",
+            "arrayMemberType": null,
+            "multipleWordsName": "Height",
+            "dataTypeCode": "Number",
+            "dataType": {
+              "code": "Number",
+              "tsDataType": "number",
+              "htmlInputType": "number",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Depth",
+            "children": [],
+            "index": 10,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "Number",
+            "arrayMemberType": null,
+            "multipleWordsName": "Depth",
+            "dataTypeCode": "Number",
+            "dataType": {
+              "code": "Number",
+              "tsDataType": "number",
+              "htmlInputType": "number",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Weight",
+            "children": [],
+            "index": 11,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "Number",
+            "arrayMemberType": null,
+            "multipleWordsName": "Weight",
+            "dataTypeCode": "Number",
+            "dataType": {
+              "code": "Number",
+              "tsDataType": "number",
+              "htmlInputType": "number",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          }
+        ],
+        "index": 7,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Object",
+        "arrayMemberType": null,
+        "multipleWordsName": "Specifications",
+        "dataTypeCode": "Object",
+        "dataType": {
+          "code": "Object",
+          "tsDataType": "any",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      }
+    ],
+    "index": 0,
+    "parent": null,
+    "level": 0,
+    "_fieldObjectPath": null,
+    "_fieldNamePath": null,
+    "fieldType": "Object",
+    "dataTypeCode": "Object",
+    "dataType": {
+      "code": "Object",
+      "tsDataType": "any",
+      "htmlInputType": "text",
+      "defaultValue": "null",
+      "sortable": false
+    },
+    "multipleWordsName": "delivery,product",
+    "subEntityList": null,
+    "childEntityList": null
+  }
+}

@@ -1,0 +1,235 @@
+{
+  "parsedRawJsonObject": {
+    "Code": "1001",
+    "Name": "John Smith",
+    "Mobile": "0311 4567 8901",
+    "Phone": "212 555-1234",
+    "Address": {
+      "Address1": "Flat 5",
+      "Address2": "148 Bunda Street",
+      "Suburb": "New York"
+    },
+    "Comment": "ABC"
+  },
+  "rootJDF": {
+    "field": "rootLevelObject",
+    "children": [
+      {
+        "field": "Code",
+        "children": [],
+        "index": 2,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Code",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Name",
+        "children": [],
+        "index": 3,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Name",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Mobile",
+        "children": [],
+        "index": 4,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Mobile",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Phone",
+        "children": [],
+        "index": 5,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Phone",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Address",
+        "children": [
+          {
+            "field": "Address1",
+            "children": [],
+            "index": 7,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Address1",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Address2",
+            "children": [],
+            "index": 8,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Address2",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          },
+          {
+            "field": "Suburb",
+            "children": [],
+            "index": 9,
+            "parent": null,
+            "level": 2,
+            "_fieldObjectPath": null,
+            "_fieldNamePath": null,
+            "fieldType": "String",
+            "arrayMemberType": null,
+            "multipleWordsName": "Suburb",
+            "dataTypeCode": "String",
+            "dataType": {
+              "code": "String",
+              "tsDataType": "string",
+              "htmlInputType": "text",
+              "defaultValue": "null",
+              "sortable": true
+            },
+            "subEntityList": null,
+            "childEntityList": null
+          }
+        ],
+        "index": 6,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Object",
+        "arrayMemberType": null,
+        "multipleWordsName": "Address",
+        "dataTypeCode": "Object",
+        "dataType": {
+          "code": "Object",
+          "tsDataType": "any",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Comment",
+        "children": [],
+        "index": 10,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "LongString",
+        "arrayMemberType": null,
+        "multipleWordsName": "Comment",
+        "dataTypeCode": "LongString",
+        "dataType": {
+          "code": "LongString",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": false
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      }
+    ],
+    "index": 0,
+    "parent": null,
+    "level": 0,
+    "_fieldObjectPath": null,
+    "_fieldNamePath": null,
+    "fieldType": "Object",
+    "dataTypeCode": "Object",
+    "dataType": {
+      "code": "Object",
+      "tsDataType": "any",
+      "htmlInputType": "text",
+      "defaultValue": "null",
+      "sortable": false
+    },
+    "multipleWordsName": "delivery,contractor",
+    "subEntityList": null,
+    "childEntityList": null
+  }
+}

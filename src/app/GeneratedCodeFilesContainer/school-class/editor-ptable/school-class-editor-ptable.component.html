@@ -1,0 +1,67 @@
+
+
+ <form [class]="agGridThemeName">
+ <div class="modal-header ag-root-wrapper d-flex flex-row">
+   <h4 class="modal-title flex-fill" >SchoolClass List:</h4>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create SchoolClass</button>
+   <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+ </div>
+ <div class="modal-body ag-root-wrapper" style="height: 80vh;" >
+   <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+     <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+   </div>
+
+<p-table
+   #dt
+   [value]="editedObjects"
+   styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+   [paginator]="false"
+   [tableStyle]="{'min-width': '50rem',  'min-height': '3em','font-size': '12px' }"
+   [rowHover]="true"
+   dataKey="id"
+>
+
+   <ng-template pTemplate="header">
+       <tr>
+         <th></th>
+         <th></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Code" style="min-width:5rem">Code<p-sortIcon field="Code" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Name" style="min-width:5rem">Name<p-sortIcon field="Name" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Active" style="min-width:5rem">Active<p-sortIcon field="Active" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Course" style="min-width:5rem">Course<p-sortIcon field="Course" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Room" style="min-width:5rem">Room<p-sortIcon field="Room" /></th>
+<th pReorderableColumn pResizableColumn >Students</th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Teacher" style="min-width:5rem">Teacher<p-sortIcon field="Teacher" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="StartDateTime" style="min-width:5rem">StartDateTime<p-sortIcon field="StartDateTime" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Hours" style="min-width:5rem">Hours<p-sortIcon field="Hours" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Weeks" style="min-width:5rem">Weeks<p-sortIcon field="Weeks" /></th>
+
+       </tr>
+   </ng-template>
+   <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+       <tr>
+         <td>
+           <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+         </td>
+         <td>
+           <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+         </td>
+<td>{{  rowData?.Code }}</td>
+<td>{{  rowData?.Name }}</td>
+<input type="checkbox" [checked]="rowData?.Active" disabled />
+<td>{{  rowData?.Course }}</td>
+<td>{{  rowData?.Room }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['Students'], "String") }}</td>
+<td>{{  rowData?.Teacher }}</td>
+<td>{{  rowData?.StartDateTime }}</td>
+<td>{{  rowData?.Hours }}</td>
+<td>{{  rowData?.Weeks }}</td>
+
+     </tr>
+   </ng-template>
+
+</p-table>
+</div>
+</form>
+

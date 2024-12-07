@@ -1,0 +1,61 @@
+
+
+ <form [class]="agGridThemeName">
+ <div class="modal-header ag-root-wrapper d-flex flex-row">
+   <h4 class="modal-title flex-fill" >SchoolCourse List:</h4>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create SchoolCourse</button>
+   <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+ </div>
+ <div class="modal-body ag-root-wrapper" style="height: 80vh;" >
+   <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+     <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+   </div>
+
+<p-table
+   #dt
+   [value]="editedObjects"
+   styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+   [paginator]="false"
+   [tableStyle]="{'min-width': '50rem',  'min-height': '3em','font-size': '12px' }"
+   [rowHover]="true"
+   dataKey="id"
+>
+
+   <ng-template pTemplate="header">
+       <tr>
+         <th></th>
+         <th></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Code" style="min-width:5rem">Code<p-sortIcon field="Code" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Name" style="min-width:5rem">Name<p-sortIcon field="Name" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Specialty" style="min-width:5rem">Specialty<p-sortIcon field="Specialty" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Level" style="min-width:5rem">Level<p-sortIcon field="Level" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Size" style="min-width:5rem">Size<p-sortIcon field="Size" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Active" style="min-width:5rem">Active<p-sortIcon field="Active" /></th>
+
+
+       </tr>
+   </ng-template>
+   <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+       <tr>
+         <td>
+           <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+         </td>
+         <td>
+           <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+         </td>
+<td>{{  rowData?.Code }}</td>
+<td>{{  rowData?.Name }}</td>
+<td>{{  rowData?.Specialty }}</td>
+<td>{{  rowData?.Level }}</td>
+<td>{{  rowData?.Size }}</td>
+<input type="checkbox" [checked]="rowData?.Active" disabled />
+
+
+     </tr>
+   </ng-template>
+
+</p-table>
+</div>
+</form>
+

@@ -1,0 +1,71 @@
+
+
+ <form [class]="agGridThemeName">
+ <div class="modal-header ag-root-wrapper d-flex flex-row">
+   <h4 class="modal-title flex-fill" >ProjectDiaryRecord List:</h4>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create ProjectDiaryRecord</button>
+   <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+ </div>
+ <div class="modal-body ag-root-wrapper" style="height: 80vh;" >
+   <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+     <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+   </div>
+
+<p-table
+   #dt
+   [value]="editedObjects"
+   styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+   [paginator]="false"
+   [tableStyle]="{'min-width': '50rem',  'min-height': '3em','font-size': '12px' }"
+   [rowHover]="true"
+   dataKey="id"
+>
+
+   <ng-template pTemplate="header">
+       <tr>
+         <th></th>
+         <th></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Code" style="min-width:5rem">Code<p-sortIcon field="Code" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Name" style="min-width:5rem">Name<p-sortIcon field="Name" /></th>
+
+<th pReorderableColumn pResizableColumn pSortableColumn="Status" style="min-width:5rem">Status<p-sortIcon field="Status" /></th>
+
+<th pReorderableColumn pResizableColumn pSortableColumn="Updated" style="min-width:5rem">Updated<p-sortIcon field="Updated" /></th>
+<th pReorderableColumn pResizableColumn >Structure</th>
+<th pReorderableColumn pResizableColumn >Design</th>
+<th pReorderableColumn pResizableColumn >Feature</th>
+<th pReorderableColumn pResizableColumn >Bug</th>
+<th pReorderableColumn pResizableColumn >Reference</th>
+<th pReorderableColumn pResizableColumn >Document</th>
+
+       </tr>
+   </ng-template>
+   <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+       <tr>
+         <td>
+           <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+         </td>
+         <td>
+           <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+         </td>
+<td>{{  rowData?.Code }}</td>
+<td>{{  rowData?.Name }}</td>
+
+<td>{{  rowData?.Status }}</td>
+
+<td>{{  rowData?.Updated }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Structure', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Structure, 'Object') }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Design', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Design, 'Object') }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Feature', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Feature, 'Object') }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Bug', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Bug, 'Object') }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Reference', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Reference, 'Object') }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorPTable('Document', idx)" ></i>{{ delegate_display_DataArray_In_GridCell(rowData.Document, 'Object') }}</td>
+
+     </tr>
+   </ng-template>
+
+</p-table>
+</div>
+</form>
+

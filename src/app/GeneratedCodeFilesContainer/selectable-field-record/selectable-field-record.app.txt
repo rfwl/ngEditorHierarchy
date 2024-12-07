@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableFieldRecordModule } from './GeneratedCodeFilesContainer/selectable-field-record/selectable-field-record.module'
+  import { SelectableFieldRecordEffects } from './GeneratedCodeFilesContainer/selectable-field-record/selectable-field-record.store'
+
+  imports: [
+    ......
+    SelectableFieldRecordModule,
+    EffectsModule.forRoot([... SelectableFieldRecordEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableFieldRecordEditorAgGridComponent } from './GeneratedCodeFilesContainer/selectable-field-record/editor-aggrid/selectable-field-record-editor-aggrid.component'
+
+  import { SelectableFieldRecordEditorPTableComponent } from './GeneratedCodeFilesContainer/selectable-field-record/editor-ptable/selectable-field-record-editor-ptable.component'
+
+  import { SelectableFieldRecordEditorFormComponent } from './GeneratedCodeFilesContainer/selectable-field-record/editor-form/selectable-field-record-editor-form.component'
+
+  <selectable-field-record-editor-aggrid #selectableFieldRecordEditorAgGridPage ></selectable-field-record-editor-aggrid>
+
+  <selectable-field-record-editor-ptable #selectableFieldRecordEditorPTablePage ></selectable-field-record-editor-ptable>
+
+  @ViewChild('selectableFieldRecordEditorAgGridPage', { static: false }) selectableFieldRecordEditorAgGrid?: SelectableFieldRecordEditorAgGridComponent
+
+  @ViewChild('selectableFieldRecordEditorPTablePage', { static: false }) selectableFieldRecordEditorPTable?: SelectableFieldRecordEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableFieldRecordState, selectableFieldRecordReducer } from "./GeneratedCodeFilesContainer/selectable-field-record/selectable-field-record.store"
+
+  export interface AppState {
+    ......
+    selectableFieldRecord: SelectableFieldRecordState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    selectableFieldRecord: selectableFieldRecordReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

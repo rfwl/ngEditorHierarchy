@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryContractorModule } from './GeneratedCodeFilesContainer/delivery-contractor/delivery-contractor.module'
+  import { DeliveryContractorEffects } from './GeneratedCodeFilesContainer/delivery-contractor/delivery-contractor.store'
+
+  imports: [
+    ......
+    DeliveryContractorModule,
+    EffectsModule.forRoot([... DeliveryContractorEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryContractorEditorAgGridComponent } from './GeneratedCodeFilesContainer/delivery-contractor/editor-aggrid/delivery-contractor-editor-aggrid.component'
+
+  import { DeliveryContractorEditorPTableComponent } from './GeneratedCodeFilesContainer/delivery-contractor/editor-ptable/delivery-contractor-editor-ptable.component'
+
+  import { DeliveryContractorEditorFormComponent } from './GeneratedCodeFilesContainer/delivery-contractor/editor-form/delivery-contractor-editor-form.component'
+
+  <delivery-contractor-editor-aggrid #deliveryContractorEditorAgGridPage ></delivery-contractor-editor-aggrid>
+
+  <delivery-contractor-editor-ptable #deliveryContractorEditorPTablePage ></delivery-contractor-editor-ptable>
+
+  @ViewChild('deliveryContractorEditorAgGridPage', { static: false }) deliveryContractorEditorAgGrid?: DeliveryContractorEditorAgGridComponent
+
+  @ViewChild('deliveryContractorEditorPTablePage', { static: false }) deliveryContractorEditorPTable?: DeliveryContractorEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { DeliveryContractorState, deliveryContractorReducer } from "./GeneratedCodeFilesContainer/delivery-contractor/delivery-contractor.store"
+
+  export interface AppState {
+    ......
+    deliveryContractor: DeliveryContractorState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    deliveryContractor: deliveryContractorReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

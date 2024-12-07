@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableOptionRecordModule } from './GeneratedCodeFilesContainer/selectable-option-record/selectable-option-record.module'
+  import { SelectableOptionRecordEffects } from './GeneratedCodeFilesContainer/selectable-option-record/selectable-option-record.store'
+
+  imports: [
+    ......
+    SelectableOptionRecordModule,
+    EffectsModule.forRoot([... SelectableOptionRecordEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableOptionRecordEditorAgGridComponent } from './GeneratedCodeFilesContainer/selectable-option-record/editor-aggrid/selectable-option-record-editor-aggrid.component'
+
+  import { SelectableOptionRecordEditorPTableComponent } from './GeneratedCodeFilesContainer/selectable-option-record/editor-ptable/selectable-option-record-editor-ptable.component'
+
+  import { SelectableOptionRecordEditorFormComponent } from './GeneratedCodeFilesContainer/selectable-option-record/editor-form/selectable-option-record-editor-form.component'
+
+  <selectable-option-record-editor-aggrid #selectableOptionRecordEditorAgGridPage ></selectable-option-record-editor-aggrid>
+
+  <selectable-option-record-editor-ptable #selectableOptionRecordEditorPTablePage ></selectable-option-record-editor-ptable>
+
+  @ViewChild('selectableOptionRecordEditorAgGridPage', { static: false }) selectableOptionRecordEditorAgGrid?: SelectableOptionRecordEditorAgGridComponent
+
+  @ViewChild('selectableOptionRecordEditorPTablePage', { static: false }) selectableOptionRecordEditorPTable?: SelectableOptionRecordEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SelectableOptionRecordState, selectableOptionRecordReducer } from "./GeneratedCodeFilesContainer/selectable-option-record/selectable-option-record.store"
+
+  export interface AppState {
+    ......
+    selectableOptionRecord: SelectableOptionRecordState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    selectableOptionRecord: selectableOptionRecordReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

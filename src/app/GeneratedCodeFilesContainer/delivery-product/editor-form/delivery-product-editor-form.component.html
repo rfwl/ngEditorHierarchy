@@ -1,0 +1,56 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="Category">Category:</label>
+<select class="form-control" formControlName="Category" id="Category" name="Category" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'deliveryProductCategoryNames')">{{nm}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="Code">Code:</label>
+<input type="text" class="form-control" formControlName="Code" id="Code" name="Code" >
+</div>
+
+<div class="form-group">
+<label for="Model">Model:</label>
+<input type="text" class="form-control" formControlName="Model" id="Model" name="Model" >
+</div>
+
+<div class="form-group">
+<label for="Make">Make:</label>
+<input type="text" class="form-control" formControlName="Make" id="Make" name="Make" >
+</div>
+
+<div class="form-group">
+<label for="Price">Price:</label>
+<input type="number" class="form-control" formControlName="Price" id="Price" name="Price" >
+</div>
+
+
+<div class="form-group">
+  <label for="Specifications">Specifications:</label>
+  <open-field-editor-form-control class='form-control' formControlName="Specifications" id="Specifications" name="Specifications"
+    [params]='build_paramsShowingEditorForm("Specifications")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+  

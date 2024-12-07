@@ -1,0 +1,200 @@
+{
+  "parsedRawJsonObject": {
+    "Code": 201,
+    "Name": "Jeremi",
+    "Active": true,
+    "Capacity": "Large",
+    "AddressLine1": "Legal House",
+    "AddressLine2": "123 Floradel Street, Chippendale",
+    "Suburb": "Tenlipu"
+  },
+  "rootJDF": {
+    "field": "rootLevelObject",
+    "children": [
+      {
+        "field": "Code",
+        "children": [],
+        "index": 2,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Number",
+        "arrayMemberType": null,
+        "multipleWordsName": "Code",
+        "dataTypeCode": "Number",
+        "dataType": {
+          "code": "Number",
+          "tsDataType": "number",
+          "htmlInputType": "number",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Name",
+        "children": [],
+        "index": 3,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Name",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Active",
+        "children": [],
+        "index": 4,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "Boolean",
+        "arrayMemberType": null,
+        "multipleWordsName": "Active",
+        "dataTypeCode": "Boolean",
+        "dataType": {
+          "code": "Boolean",
+          "tsDataType": "boolean",
+          "htmlInputType": "checkbox",
+          "defaultValue": "false",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Capacity",
+        "children": [],
+        "index": 5,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Capacity",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "selectorConfig": {
+          "selectorViewType": "SelectSingle",
+          "selectorOptionSource": "ValueArray",
+          "optionValueArrayName": "roomCapacityNames",
+          "optionLabelledValueArrayName": "",
+          "optionObjectArrayName": "",
+          "objectArrayLabelField": "",
+          "objectArrayValueField": "",
+          "optionRecordListName": "",
+          "recordListLabelFunction": "",
+          "recordListLabelField": "",
+          "recordListValueField": ""
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "AddressLine1",
+        "children": [],
+        "index": 6,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "AddressLine1",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "AddressLine2",
+        "children": [],
+        "index": 7,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "AddressLine2",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      },
+      {
+        "field": "Suburb",
+        "children": [],
+        "index": 8,
+        "parent": null,
+        "level": 1,
+        "_fieldObjectPath": null,
+        "_fieldNamePath": null,
+        "fieldType": "String",
+        "arrayMemberType": null,
+        "multipleWordsName": "Suburb",
+        "dataTypeCode": "String",
+        "dataType": {
+          "code": "String",
+          "tsDataType": "string",
+          "htmlInputType": "text",
+          "defaultValue": "null",
+          "sortable": true
+        },
+        "subEntityList": null,
+        "childEntityList": null
+      }
+    ],
+    "index": 0,
+    "parent": null,
+    "level": 0,
+    "_fieldObjectPath": null,
+    "_fieldNamePath": null,
+    "fieldType": "Object",
+    "dataTypeCode": "Object",
+    "dataType": {
+      "code": "Object",
+      "tsDataType": "any",
+      "htmlInputType": "text",
+      "defaultValue": "null",
+      "sortable": false
+    },
+    "multipleWordsName": "school,room",
+    "subEntityList": null,
+    "childEntityList": null
+  }
+}

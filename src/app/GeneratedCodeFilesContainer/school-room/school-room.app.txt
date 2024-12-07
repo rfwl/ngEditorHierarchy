@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolRoomModule } from './GeneratedCodeFilesContainer/school-room/school-room.module'
+  import { SchoolRoomEffects } from './GeneratedCodeFilesContainer/school-room/school-room.store'
+
+  imports: [
+    ......
+    SchoolRoomModule,
+    EffectsModule.forRoot([... SchoolRoomEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolRoomEditorAgGridComponent } from './GeneratedCodeFilesContainer/school-room/editor-aggrid/school-room-editor-aggrid.component'
+
+  import { SchoolRoomEditorPTableComponent } from './GeneratedCodeFilesContainer/school-room/editor-ptable/school-room-editor-ptable.component'
+
+  import { SchoolRoomEditorFormComponent } from './GeneratedCodeFilesContainer/school-room/editor-form/school-room-editor-form.component'
+
+  <school-room-editor-aggrid #schoolRoomEditorAgGridPage ></school-room-editor-aggrid>
+
+  <school-room-editor-ptable #schoolRoomEditorPTablePage ></school-room-editor-ptable>
+
+  @ViewChild('schoolRoomEditorAgGridPage', { static: false }) schoolRoomEditorAgGrid?: SchoolRoomEditorAgGridComponent
+
+  @ViewChild('schoolRoomEditorPTablePage', { static: false }) schoolRoomEditorPTable?: SchoolRoomEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolRoomState, schoolRoomReducer } from "./GeneratedCodeFilesContainer/school-room/school-room.store"
+
+  export interface AppState {
+    ......
+    schoolRoom: SchoolRoomState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    schoolRoom: schoolRoomReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

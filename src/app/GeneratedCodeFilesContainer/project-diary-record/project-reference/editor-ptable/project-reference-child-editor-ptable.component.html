@@ -1,0 +1,59 @@
+
+
+    <form [class]="agGridThemeName">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editedObjectClassName}} List:</h4>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create {{editedObjectClassName}}</button>
+        <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+      </div>
+      <div class="modal-body ag-root-wrapper" style="height: 40em;" >
+        <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+          <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+        </div>
+    <p-table
+      #templatePTable
+      [value]="editedObjects"
+      [resizableColumns]="true"
+      columnResizeMode="expand"
+      styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+      [paginator]="false"
+      [tableStyle]="{'min-width': '50rem',  'min-height': '3em', 'font-size': '12px' }"
+      [rowHover]="true"
+      dataKey="id"
+    >
+
+      <ng-template pTemplate="header">
+          <tr>
+            <th></th>
+            <th></th>
+
+<th pReorderableColumn pResizableColumn pSortableColumn="Code" style="min-width:5rem">Code<p-sortIcon field="Code" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Name" style="min-width:5rem">Name<p-sortIcon field="Name" /></th>
+
+<th pReorderableColumn pResizableColumn pSortableColumn="Category" style="min-width:5rem">Category<p-sortIcon field="Category" /></th>
+
+
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+          <tr>
+            <td>
+              <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+            </td>
+            <td>
+              <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+            </td>
+
+<td>{{  rowData?.Code }}</td>
+<td>{{  rowData?.Name }}</td>
+
+<td>{{  rowData?.Category }}</td>
+
+
+        </tr>
+      </ng-template>
+
+      </p-table>
+    </div>
+    </form>

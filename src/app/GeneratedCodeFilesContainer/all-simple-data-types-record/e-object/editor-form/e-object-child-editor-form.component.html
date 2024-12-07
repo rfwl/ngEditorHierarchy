@@ -1,0 +1,67 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="FString">FString:</label>
+<input type="text" class="form-control" formControlName="FString" id="FString" name="FString" >
+</div>
+
+<div class="form-group">
+<label for="FNumber">FNumber:</label>
+<input type="number" class="form-control" formControlName="FNumber" id="FNumber" name="FNumber" >
+</div>
+
+<div class="form-group">
+<label for="FBoolean">FBoolean:</label>
+<input type="checkbox" class="form-check-input ms-2 me-4" formControlName="FBoolean" id="FBoolean" name="FBoolean" >
+</div>
+
+<div class="form-group">
+<label for="FEmail">FEmail:</label>
+<input type="email" class="form-control" formControlName="FEmail" id="FEmail" name="FEmail" >
+</div>
+
+<div class="form-group">
+<label for="FUrl">FUrl:</label>
+<input type="url" class="form-control" formControlName="FUrl" id="FUrl" name="FUrl" >
+</div>
+
+<div class="form-group">
+<label for="FColor">FColor:</label>
+<input type="color" class="form-control" formControlName="FColor" id="FColor" name="FColor" >
+</div>
+
+<div class="form-group">
+<label for="FDate">FDate:</label>
+<input type="date" class="form-control" formControlName="FDate" id="FDate" name="FDate" >
+</div>
+
+<div class="form-group">
+<label for="FTime">FTime:</label>
+<input type="time" class="form-control" formControlName="FTime" id="FTime" name="FTime" >
+</div>
+
+<div class="form-group">
+<label for="FDatetime">FDatetime:</label>
+<input type="datetime-local" class="form-control" formControlName="FDatetime" id="FDatetime" name="FDatetime" >
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

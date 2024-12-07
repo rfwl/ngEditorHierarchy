@@ -1,0 +1,63 @@
+
+
+ <form [class]="agGridThemeName">
+ <div class="modal-header ag-root-wrapper d-flex flex-row">
+   <h4 class="modal-title flex-fill" >DeliveryTrackRecord List:</h4>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+   <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create DeliveryTrackRecord</button>
+   <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+ </div>
+ <div class="modal-body ag-root-wrapper" style="height: 80vh;" >
+   <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+     <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+   </div>
+
+<p-table
+   #dt
+   [value]="editedObjects"
+   styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+   [paginator]="false"
+   [tableStyle]="{'min-width': '50rem',  'min-height': '3em','font-size': '12px' }"
+   [rowHover]="true"
+   dataKey="id"
+>
+
+   <ng-template pTemplate="header">
+       <tr>
+         <th></th>
+         <th></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Product" style="min-width:5rem">Product<p-sortIcon field="Product" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Store" style="min-width:5rem">Store<p-sortIcon field="Store" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Contractor" style="min-width:5rem">Contractor<p-sortIcon field="Contractor" /></th>
+<th pReorderableColumn pResizableColumn >Customer</th>
+<th pReorderableColumn pResizableColumn >Address</th>
+<th pReorderableColumn pResizableColumn pSortableColumn="StartDateTime" style="min-width:5rem">StartDateTime<p-sortIcon field="StartDateTime" /></th>
+<th pReorderableColumn pResizableColumn pSortableColumn="Status" style="min-width:5rem">Status<p-sortIcon field="Status" /></th>
+
+
+       </tr>
+   </ng-template>
+   <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+       <tr>
+         <td>
+           <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+         </td>
+         <td>
+           <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+         </td>
+<td>{{  rowData?.Product }}</td>
+<td>{{  rowData?.Store }}</td>
+<td>{{  rowData?.Contractor }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorForm('Customer', idx)" ></i>{{ rowData.Customer? "Object" : "" }}</td>
+<td><i type="button" class="close fa fa-box-open pe-1" (click)="showFieldEditorForm('Address', idx)" ></i>{{ rowData.Address? "Object" : "" }}</td>
+<td>{{  rowData?.StartDateTime }}</td>
+<td>{{  rowData?.Status }}</td>
+
+
+     </tr>
+   </ng-template>
+
+</p-table>
+</div>
+</form>
+

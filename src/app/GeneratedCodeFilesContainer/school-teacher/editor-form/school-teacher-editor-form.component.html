@@ -1,0 +1,97 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="Code">Code:</label>
+<input type="number" class="form-control" formControlName="Code" id="Code" name="Code" >
+</div>
+
+<div class="form-group">
+<label for="Title">Title:</label>
+<select class="form-control" formControlName="Title" id="Title" name="Title" >
+<option [value]="lv.value" *ngFor="let lv of getSelectorOptionArray('LabelledValueArray', 'personTitles')">{{lv.label}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="FirstName">FirstName:</label>
+<input type="text" class="form-control" formControlName="FirstName" id="FirstName" name="FirstName" >
+</div>
+
+<div class="form-group">
+<label for="LastName">LastName:</label>
+<input type="text" class="form-control" formControlName="LastName" id="LastName" name="LastName" >
+</div>
+
+<div class="form-group">
+<label for="DOB">DOB:</label>
+<input type="date" class="form-control" formControlName="DOB" id="DOB" name="DOB" >
+</div>
+
+<div class="form-group">
+<label for="Gender">Gender:</label>
+<select class="form-control" formControlName="Gender" id="Gender" name="Gender" >
+<option [value]="lv.value" *ngFor="let lv of getSelectorOptionArray('LabelledValueArray', 'personGenders')">{{lv.label}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="Active">Active:</label>
+<input type="checkbox" class="form-check-input ms-2 me-4" formControlName="Active" id="Active" name="Active" >
+</div>
+
+<div class="form-group">
+<label for="Level">Level:</label>
+<select class="form-control" formControlName="Level" id="Level" name="Level" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'classLevelNames')">{{nm}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="Specialty">Specialty:</label>
+<select class="form-control" formControlName="Specialty" id="Specialty" name="Specialty" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'specialtyNames')">{{nm}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="Qualification">Qualification:</label>
+<select class="form-control" formControlName="Qualification" id="Qualification" name="Qualification" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'qualificationNames')">{{nm}}</option>
+</select>
+</div>
+
+
+<div class="form-group">
+  <label for="Address">Address:</label>
+  <open-field-editor-form-control class='form-control' formControlName="Address" id="Address" name="Address"
+    [params]='build_paramsShowingEditorForm("Address")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+<div class="form-group">
+  <label for="Contact">Contact:</label>
+  <open-field-editor-form-control class='form-control' formControlName="Contact" id="Contact" name="Contact"
+    [params]='build_paramsShowingEditorForm("Contact")'  >
+  </open-field-editor-form-control>
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+  

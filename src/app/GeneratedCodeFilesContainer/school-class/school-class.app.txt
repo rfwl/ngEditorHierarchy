@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolClassModule } from './GeneratedCodeFilesContainer/school-class/school-class.module'
+  import { SchoolClassEffects } from './GeneratedCodeFilesContainer/school-class/school-class.store'
+
+  imports: [
+    ......
+    SchoolClassModule,
+    EffectsModule.forRoot([... SchoolClassEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolClassEditorAgGridComponent } from './GeneratedCodeFilesContainer/school-class/editor-aggrid/school-class-editor-aggrid.component'
+
+  import { SchoolClassEditorPTableComponent } from './GeneratedCodeFilesContainer/school-class/editor-ptable/school-class-editor-ptable.component'
+
+  import { SchoolClassEditorFormComponent } from './GeneratedCodeFilesContainer/school-class/editor-form/school-class-editor-form.component'
+
+  <school-class-editor-aggrid #schoolClassEditorAgGridPage ></school-class-editor-aggrid>
+
+  <school-class-editor-ptable #schoolClassEditorPTablePage ></school-class-editor-ptable>
+
+  @ViewChild('schoolClassEditorAgGridPage', { static: false }) schoolClassEditorAgGrid?: SchoolClassEditorAgGridComponent
+
+  @ViewChild('schoolClassEditorPTablePage', { static: false }) schoolClassEditorPTable?: SchoolClassEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { SchoolClassState, schoolClassReducer } from "./GeneratedCodeFilesContainer/school-class/school-class.store"
+
+  export interface AppState {
+    ......
+    schoolClass: SchoolClassState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    schoolClass: schoolClassReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

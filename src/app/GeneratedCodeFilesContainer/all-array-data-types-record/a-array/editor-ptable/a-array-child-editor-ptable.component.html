@@ -1,0 +1,69 @@
+
+
+    <form [class]="agGridThemeName">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >AArrays:</h4>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="outputJsonString()" >JSON</button>
+        <button type="button" class="btn btn-primary btn-sm m-1" (click)="showCreateForm(undefined, undefined)" >Create AArray</button>
+        <i type="button" style="padding-left: 10px; font-size: 200%" *ngIf="isInModal" class="close fa fa-close" aria-label="Close" (click)="hideEditorPTable($event)" ></i>
+      </div>
+      <div class="modal-body ag-root-wrapper" style="height: 40em;" >
+        <div class='alert alert-warning'*ngIf="runtimeMessageLines.length>0">
+          <p *ngFor="let msgLn of runtimeMessageLines">{{msgLn}}</p>
+        </div>
+    <p-table
+      #templatePTable
+      [value]="editedObjects"
+      [resizableColumns]="true"
+      columnResizeMode="expand"
+      styleClass="p-datatable-striped p-datatable-gridlines p-datatable-sm fs-6"
+      [paginator]="false"
+      [tableStyle]="{'min-width': '50rem',  'min-height': '3em', 'font-size': '12px' }"
+      [rowHover]="true"
+      dataKey="id"
+    >
+
+      <ng-template pTemplate="header">
+          <tr>
+            <th></th>
+            <th></th>
+
+<th pReorderableColumn pResizableColumn >BStrings</th>
+<th pReorderableColumn pResizableColumn >BNumbers</th>
+<th pReorderableColumn pResizableColumn >BBooleans</th>
+<th pReorderableColumn pResizableColumn >BEmails</th>
+<th pReorderableColumn pResizableColumn >BUrls</th>
+<th pReorderableColumn pResizableColumn >BColors</th>
+<th pReorderableColumn pResizableColumn >BDates</th>
+<th pReorderableColumn pResizableColumn >BTimes</th>
+<th pReorderableColumn pResizableColumn >BDatetimes</th>
+
+
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-idx="rowIndex">
+          <tr>
+            <td>
+              <i type="button" class="close fa fa-edit" (click)="showUpdateForm('Edit', idx)" ></i>
+            </td>
+            <td>
+              <i type="button" class="close fa fa-trash" (click)="showDeleteForm('Delete', idx)" ></i>
+            </td>
+
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BStrings'], "String") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BNumbers'], "Number") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BBooleans'], "Boolean") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BEmails'], "Email") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BUrls'], "Url") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BColors'], "Color") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BDates'], "Date") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BTimes'], "Time") }}</td>
+<td> {{ delegate_display_DataArray_In_GridCell(rowData['BDatetimes'], "Datetime") }}</td>
+
+
+        </tr>
+      </ng-template>
+
+      </p-table>
+    </div>
+    </form>

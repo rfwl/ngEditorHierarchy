@@ -1,0 +1,86 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="SelectFromValueArray">SelectFromValueArray:</label>
+<select class="form-control" formControlName="SelectFromValueArray" id="SelectFromValueArray" name="SelectFromValueArray" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'academicGrades')">{{nm}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="SelectFromLabeledValueArray">SelectFromLabeledValueArray:</label>
+<select class="form-control" formControlName="SelectFromLabeledValueArray" id="SelectFromLabeledValueArray" name="SelectFromLabeledValueArray" >
+<option [value]="lv.value" *ngFor="let lv of getSelectorOptionArray('LabelledValueArray', 'monthNames')">{{lv.label}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="SelectFromObjectArray">SelectFromObjectArray:</label>
+<select class="form-control" formControlName="SelectFromObjectArray" id="SelectFromObjectArray" name="SelectFromObjectArray" >
+<option [value]="obj.City" *ngFor="let obj of getSelectorOptionArray('ObjectArray', 'stores')">{{obj.Name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="SelectFromRecordList">SelectFromRecordList:</label>
+<select class="form-control" formControlName="SelectFromRecordList" id="SelectFromRecordList" name="SelectFromRecordList" >
+<option [value]="obj.code" *ngFor="let obj of SelectFromRecordList_SelectableOptionRecord_Options">{{obj.name}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="RadioFromValueArray">RadioFromValueArray:</label>
+<div *ngFor="let nm of getSelectorOptionArray('ValueArray', 'windowSizes')">
+<input type="radio" class="ms-3 me-1" formControlName="RadioFromValueArray" name="RadioFromValueArray" 
+[id]="'RadioFromValueArray_' + nm" [value]="nm">
+{{nm}}</div>
+
+</div>
+
+<div class="form-group">
+<label for="RadioFromLabeledValueArray">RadioFromLabeledValueArray:</label>
+<div *ngFor="let lv of getSelectorOptionArray('LabelledValueArray', 'monthNames')">
+<input type="radio" class="ms-3 me-1" formControlName="RadioFromLabeledValueArray" name="RadioFromLabeledValueArray" 
+[id]="'RadioFromLabeledValueArray_' + lv.label" [value]="lv.value">
+{{lv.label}}</div>
+
+</div>
+
+<div class="form-group">
+<label for="RadioFromObjectArray">RadioFromObjectArray:</label>
+<div *ngFor="let obj of getSelectorOptionArray('ObjectArray', 'cars')">
+<input type="radio" class="ms-3 me-1" formControlName="RadioFromObjectArray" name="RadioFromObjectArray" 
+[id]="'RadioFromObjectArray_' + obj.brand" [value]="obj.color" >
+{{obj.brand}}</div>
+
+</div>
+
+<div class="form-group">
+<label for="RadioFromRecordList">RadioFromRecordList:</label>
+<div *ngFor="let obj of RadioFromRecordList_SelectableOptionRecord_Options">
+<input type="radio" class="ms-3 me-1" formControlName="RadioFromRecordList" name="RadioFromRecordList" 
+[id]="'RadioFromRecordList_' + obj.name" [value]="obj.code" >
+{{obj.name}}</div>
+
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+    

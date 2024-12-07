@@ -1,0 +1,59 @@
+
+  //=====================================================================================
+  // Add the following lines to the module file to reference the generated module
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ProjectDiaryRecordModule } from './GeneratedCodeFilesContainer/project-diary-record/project-diary-record.module'
+  import { ProjectDiaryRecordEffects } from './GeneratedCodeFilesContainer/project-diary-record/project-diary-record.store'
+
+  imports: [
+    ......
+    ProjectDiaryRecordModule,
+    EffectsModule.forRoot([... ProjectDiaryRecordEffects, ...]),
+    ......
+  ]
+
+  */
+  //====================================================================================
+  // The following lines might be needed to add into the component file to show the generated top components
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ProjectDiaryRecordEditorAgGridComponent } from './GeneratedCodeFilesContainer/project-diary-record/editor-aggrid/project-diary-record-editor-aggrid.component'
+
+  import { ProjectDiaryRecordEditorPTableComponent } from './GeneratedCodeFilesContainer/project-diary-record/editor-ptable/project-diary-record-editor-ptable.component'
+
+  import { ProjectDiaryRecordEditorFormComponent } from './GeneratedCodeFilesContainer/project-diary-record/editor-form/project-diary-record-editor-form.component'
+
+  <project-diary-record-editor-aggrid #projectDiaryRecordEditorAgGridPage ></project-diary-record-editor-aggrid>
+
+  <project-diary-record-editor-ptable #projectDiaryRecordEditorPTablePage ></project-diary-record-editor-ptable>
+
+  @ViewChild('projectDiaryRecordEditorAgGridPage', { static: false }) projectDiaryRecordEditorAgGrid?: ProjectDiaryRecordEditorAgGridComponent
+
+  @ViewChild('projectDiaryRecordEditorPTablePage', { static: false }) projectDiaryRecordEditorPTable?: ProjectDiaryRecordEditorPTableComponent
+
+  */
+  //====================================================================================
+  // Add the following lines to the file defining the NGRX store: state and reducer.
+  // Replace "GeneratedCodeFilesContainer" with proper folder path
+  /*
+
+  import { ProjectDiaryRecordState, projectDiaryRecordReducer } from "./GeneratedCodeFilesContainer/project-diary-record/project-diary-record.store"
+
+  export interface AppState {
+    ......
+    projectDiaryRecord: ProjectDiaryRecordState
+    ......
+  }
+
+  export const reducers: ActionReducerMap<AppState> = {
+    ......
+    projectDiaryRecord: projectDiaryRecordReducer,
+    ......
+  }
+
+  */
+  //====================================================================================
+  

@@ -1,0 +1,58 @@
+
+    <form [formGroup]="editorForm" (ngSubmit)="submitEditorForm(editorForm)" [class]="agGridThemeName" autocomplete="off">
+      <div class="modal-header ag-root-wrapper d-flex flex-row" >
+        <h4 class="modal-title flex-fill" >{{editorFormTitle}}</h4>
+        <h4><i type="button" class="close pull-end fa fa-close" aria-label="Close" *ngIf="isInModal" (click)="hideEditorForm()" ></i></h4>
+      </div>
+
+      <div class="modal-body ag-root-wrapper" >
+
+<div class="form-group">
+<label for="Code">Code:</label>
+<input type="number" class="form-control" formControlName="Code" id="Code" name="Code" >
+</div>
+
+<div class="form-group">
+<label for="Name">Name:</label>
+<input type="text" class="form-control" formControlName="Name" id="Name" name="Name" >
+</div>
+
+<div class="form-group">
+<label for="Active">Active:</label>
+<input type="checkbox" class="form-check-input ms-2 me-4" formControlName="Active" id="Active" name="Active" >
+</div>
+
+<div class="form-group">
+<label for="Capacity">Capacity:</label>
+<select class="form-control" formControlName="Capacity" id="Capacity" name="Capacity" >
+<option [value]="nm" *ngFor="let nm of getSelectorOptionArray('ValueArray', 'roomCapacityNames')">{{nm}}</option>
+</select>
+</div>
+
+<div class="form-group">
+<label for="AddressLine1">AddressLine1:</label>
+<input type="text" class="form-control" formControlName="AddressLine1" id="AddressLine1" name="AddressLine1" >
+</div>
+
+<div class="form-group">
+<label for="AddressLine2">AddressLine2:</label>
+<input type="text" class="form-control" formControlName="AddressLine2" id="AddressLine2" name="AddressLine2" >
+</div>
+
+<div class="form-group">
+<label for="Suburb">Suburb:</label>
+<input type="text" class="form-control" formControlName="Suburb" id="Suburb" name="Suburb" >
+</div>
+
+
+
+      </div>
+
+      <div class="ag-root-wrapper modal-footer " style="flex-direction: row;" >
+        <button type="button" class="btn btn-primary" (click)="outputJsonString()" >JSON</button>
+        <button [disabled]="editorForm.invalid" class="btn btn-primary" type="submit" >{{submitButtonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="hideEditorForm()" >Cancel</button>
+      </div>
+
+    </form>
+  
